@@ -9,7 +9,7 @@ body {
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   margin: 20px;
-  position: relative; /* Make the patient-info container a positioning context */
+  position: relative; 
 }
 
 .header {
@@ -19,8 +19,8 @@ body {
 
 .profile-container {
   display: flex;
-  justify-content: space-between; /* Align profile details and image */
-  align-items: flex-start; /* Align items to the top */
+  justify-content: space-between; 
+  align-items: flex-start; 
 }
 
 .profile-image {
@@ -35,7 +35,7 @@ body {
 }
 
 .goal-box {
-  margin-top: 15px; /* Space between patient details and goal box */
+  margin-top: 15px; 
 }
 
 .contact-info p {
@@ -45,18 +45,18 @@ body {
 
 .icon {
   margin-right: 8px;
-  font-size: 16px; /* Adjust the icon size */
-  color: #2C2B2B;  /* Match the icon color with the text */
+  font-size: 16px;
+  color: #2C2B2B;  
 }
 
 .progress-container {
-  background-color: #012E57; /* Full blue background for the entire division */
+  background-color: #012E57; 
   border-radius: 10px;
-  padding: 10px; /* Reduced padding */
-  width: 220px; /* Adjusted width for the progress container */
+  padding: 10px; 
+  width: 220px; 
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Center the progress container horizontally */
-  color: white; /* Set text color to white for all text within this container */
+  margin: 0 auto; 
+  color: white; 
 }
 
 .goal-reached {
@@ -67,7 +67,7 @@ body {
 
 .progress-circle {
   position: relative;
-  width: 100px; /* Adjusted size for the progress circle */
+  width: 100px; 
   height: 100px;
   background: conic-gradient(#FCB000 0% 40%, #7D7D7D 40% 100%);
   border-radius: 50%;
@@ -87,7 +87,7 @@ body {
 
 .metrics {
   display: flex;
-  justify-content: space-between; /* Space out the metrics */
+  justify-content: space-between; 
   margin-top: 10px;
 }
 
