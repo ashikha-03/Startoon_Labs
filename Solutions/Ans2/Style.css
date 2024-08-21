@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F7F7F7;
+}
+
+.patient-info {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  position: relative; /* Make the patient-info container a positioning context */
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-between; /* Align profile details and image */
+  align-items: flex-start; /* Align items to the top */
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.patient-details {
+  flex: 1;
+}
+
+.goal-box {
+  margin-top: 15px; /* Space between patient details and goal box */
+}
+
+.contact-info p {
+  margin: 5px 0;
+  color: #2C2B2B;
+}
+
+.icon {
+  margin-right: 8px;
+  font-size: 16px; /* Adjust the icon size */
+  color: #2C2B2B;  /* Match the icon color with the text */
+}
+
+.progress-container {
+  background-color: #012E57; /* Full blue background for the entire division */
+  border-radius: 10px;
+  padding: 10px; /* Reduced padding */
+  width: 220px; /* Adjusted width for the progress container */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center the progress container horizontally */
+  color: white; /* Set text color to white for all text within this container */
+}
+
+.goal-reached {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.progress-circle {
+  position: relative;
+  width: 100px; /* Adjusted size for the progress circle */
+  height: 100px;
+  background: conic-gradient(#FCB000 0% 40%, #7D7D7D 40% 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.progress-value {
+  position: absolute;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+.metrics {
+  display: flex;
+  justify-content: space-between; /* Space out the metrics */
+  margin-top: 10px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metric-label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.metric-chart {
+  background-color: #D9D9D9;
+  border-radius: 5px;
+}
