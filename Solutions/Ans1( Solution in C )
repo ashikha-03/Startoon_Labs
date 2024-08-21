@@ -1,1 +1,73 @@
+#include <stdio.h>
 
+void find_peaks(float data[], int n, int maxima[], int minima[], int *max_count, int *min_count) {
+    *max_count = 0;
+    *min_count = 0;
+
+    for (int i = 1; i < n - 1; i++) {
+        if (data[i] > data[i-1] && data[i] > data[i+1]) {
+            maxima[(*max_count)++] = i;
+        }
+        if (data[i] < data[i-1] && data[i] < data[i+1]) {
+            minima[(*min_count)++] = i;
+        }
+    }
+}
+
+int main() {
+    FILE *file1, *file2;
+    float data1[1000], data2[1000];
+    int n1 = 0, n2 = 0;
+
+    // Load Data Set 1
+    file1 = fopen("Data_1.txt", "r");
+    if (file1 == NULL) {
+        perror("Error opening Data_1.txt");
+        return 1;
+    }
+    while (fscanf(file1, "%f", &data1[n1]) != EOF) {
+        n1++;
+    }
+    fclose(file1);
+
+    // Load Data Set 2
+    file2 = fopen("Data_2.txt", "r");
+    if (file2 == NULL) {
+        perror("Error opening Data_2.txt");
+        return 1;
+    }
+    while (fscanf(file2, "%f", &data2[n2]) != EOF) {
+        n2++;
+    }
+    fclose(file2);
+
+    int maxima1[100], minima1[100], maxima2[100], minima2[100];
+    int max_count1, min_count1, max_count2, min_count2;
+
+    find_peaks(data1, n1, maxima1, minima1, &max_count1, &min_count1);
+    find_peaks(data2, n2, maxima2, minima2, &max_count2, &min_count2);
+
+    // Print Results for Data Set 1
+    printf("Data Set 1 Maxima Indices:\n");
+    for (int i = 0; i < max_count1; i++) {
+        printf("%d ", maxima1[i]);
+    }
+    printf("\nData Set 1 Minima Indices:\n");
+    for (int i = 0; i < min_count1; i++) {
+        printf("%d ", minima1[i]);
+    }
+    printf("\n");
+
+    // Print Results for Data Set 2
+    printf("\nData Set 2 Maxima Indices:\n");
+    for (int i = 0; i < max_count2; i++) {
+        printf("%d ", maxima2[i]);
+    }
+    printf("\nData Set 2 Minima Indices:\n");
+    for (int i = 0; i < min_count2; i++) {
+        printf("%d ", minima2[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
